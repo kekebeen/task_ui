@@ -1,0 +1,29 @@
+.service{
+  //margin-right: rems(30px);
+  padding: rems(38px);
+  display: flex;
+  align-items: center;
+  margin-bottom: rems(30px);
+  @include respond-to-max($media-tablet){
+    margin-bottom: rems(20px);
+  }
+
+  &__avatar{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: tomato;
+    margin-right: rems(18px);
+  }
+  
+  .stats__info{
+    font-size: rems(28px);
+    color: $service-stat-color;
+    line-height: rems(36px);
+  }
+  
+  .stats__title{
+    color: $service-title-color;
+    font-size: rems(12px);
+  }
+}

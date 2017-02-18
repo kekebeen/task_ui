@@ -5,6 +5,7 @@ $breakpoint:"only screen and (max-width:800px)";
 
 .row {
   display: flex;
+  flex-wrap: wrap;
 }
 .container {
   max-width: $grid-max-width;

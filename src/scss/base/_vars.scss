@@ -9,13 +9,16 @@ $white: #ffffff;
 $font-family: "Lato";
 $font-size: 16px;
 
+// services section variables
+$service-stat-color: $header-color;
+$service-title-color: #6d7487;
 
 // articles section variables
 $large-article-background: #9c62b5;
 $large-article-font-color: $white;
 
 $small-article-background: $white;
-$small-article-font-color: #32394d;
+$small-article-font-color: $header-color;
 $small-article-number-color: #c6c9cc;
 $author-avatar-background: #10131c;
 

@@ -5,6 +5,11 @@
   &--large{
     margin-right: rems(40px);
     color: $large-article-font-color;
+
+    @include respond-to-max($media-tablet){
+      margin-right: 0;
+      margin-bottom: rems(20px);
+    }
   }
   &--small{
     background: $small-article-background;
@@ -71,6 +76,9 @@
     
     &--large{
       padding-right: rems(170px);
+      @include respond-to-max($media-tablet){
+        padding-right: rems(30px);
+      }
     }
   }
   &__body{
