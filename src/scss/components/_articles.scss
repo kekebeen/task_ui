@@ -1,0 +1,80 @@
+.article {
+  position: relative;
+  border-radius: 4px;
+  padding: rems(40px) 0 (40px) (40px);
+  &--large{
+    margin-right: rems(40px);
+    color: $large-article-font-color;
+  }
+  &--small{
+    background: $small-article-background;
+    color: $small-article-font-color;
+    padding: rems(40px);
+  }
+  &__header{
+    display: flex;
+    &--large{
+      margin-bottom: rems(58px);
+    }
+    &--small{
+      margin-bottom: rems(30px);
+
+      .article__author{
+        display: flex;
+        align-items: center;
+        font-size: rems(14px);
+        .author__avatar{
+          width: rems(40px);
+          height: rems(40px);
+          background: $author-avatar-background;
+          border-radius: 100%;
+        }
+        .author__name{
+          padding-left: rems(14px);
+          flex: 1 1 auto;
+        }
+        .posts__count{
+          color: $small-article-number-color;
+        }
+      }
+    }
+    .tag{
+      padding: 0.3rem 1rem;
+      border: 1px solid transparent;
+      border-radius: 1rem;
+      font-size: rems(12px);
+      color:white;
+      transition: all 0.3s ease-out;
+      margin-bottom: 0.3rem;
+      margin-right: rems(10px);
+      position: relative;
+    }
+  }
+  &__title{
+    margin-bottom: rems(15px);
+
+    &--large{
+      font-size: rems(34px);
+      line-height: rems(36px);
+    }
+
+    &--small{
+      font-size: rems(24px);
+      line-height: rems(30px);
+      word-wrap: break-word;
+      padding-right: rems(100px);
+    }
+  }
+  &__description{
+    line-height: rems(24px);
+    opacity: 0.7;
+    
+    &--large{
+      padding-right: rems(170px);
+    }
+  }
+  &__body{
+    margin-bottom: rems(50px);
+  }
+  &__footer{}
+}

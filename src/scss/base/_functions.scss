@@ -1,0 +1,20 @@
+// use instead of lighten unction
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
+}
+
+// use instead of darken function
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
+}
+
+// use instead of pixel values
+// local variable to store font-size (map-get not working properly in this case)
+$font-base: 16px;
+@function rems($size) {
+  @return ($size / $font-base) * 1rem;
+}
+
+@function ems($size) {
+  @return ($size / $font-base) * 1em;
+}

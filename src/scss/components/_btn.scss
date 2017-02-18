@@ -1,0 +1,28 @@
+.btn{
+  display: inline;
+  padding: 12px 25px;
+  font-size: rems(14px);
+  &__link{
+    span{
+      margin-left: rems(16px);
+      line-height: rems(32px);
+      vertical-align: middle;
+    }
+
+    &:hover,
+    &:active{
+      opacity: 0.8;
+    }
+  }
+  &--round{
+    border-radius: rems(20px);
+    text-align: center;
+  }
+
+  &--white{
+    border: 1px solid $round-btn-white-border;
+  }
+  &--dark{
+    border: 1px solid $round-btn-dark-border;
+  }
+}
