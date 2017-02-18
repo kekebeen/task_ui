@@ -13,7 +13,7 @@ let ArticleSmall = React.createClass({
             </div>
             <div className='author__name'>
               {this.props.author}
-              <div className='posts__count'>{this.props.numberOfPosts}</div>
+              <div className='posts__count'>{this.props.numberOfPosts} posts</div>
             </div>
           </div>
         </div>
