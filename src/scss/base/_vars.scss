@@ -10,8 +10,11 @@ $font-family: "Lato";
 $font-size: 16px;
 
 // services section variables
-$service-stat-color: $header-color;
-$service-title-color: #6d7487;
+$service-stat-color-dark: $header-color;
+$service-stat-color-white: $white;
+
+$service-title-color-dark: #6d7487;
+$service-title-color-white: $white;
 
 // articles section variables
 $large-article-background: #9c62b5;

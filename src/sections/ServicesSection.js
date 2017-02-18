@@ -9,29 +9,37 @@ let ServicesSection = React.createClass({
           bg: 'white',
           stat: '$98,420',
           title: 'Project Revenue',
-          icon: 'chart',
-          type: 'white'
+          icon: 'iconChart',
+          fontColor: 'white',
+          avatarBg: '#11d11f',
+          colorClass: 'color-dark'
         },
         {
           bg: 'white',
           stat: '325',
           title: 'New users',
-          icon: 'user',
-          color: 'dark'
+          icon: 'iconUser',
+          color: 'dark',
+          avatarBg: '#0a95dd',
+          colorClass: 'color-dark'
         },
         {
           bg: 'white',
           stat: '3,567',
           title: 'Bags sold',
-          icon: 'bag',
-          color: 'dark'
+          icon: 'iconBag',
+          color: 'dark',
+          avatarBg: '#bb4fd2',
+          colorClass: 'color-dark'
         },
         {
           bg: 'white',
           stat: '32',
           title: 'Happy clients',
-          icon: 'heart',
-          color: 'dark'
+          icon: 'iconHeart',
+          color: 'dark',
+          avatarBg: '#f08232',
+          colorClass: 'color-dark'
         }
       ],
       colorServices: [
@@ -39,29 +47,37 @@ let ServicesSection = React.createClass({
           bg: '#1cc327',
           stat: '$98,420',
           title: 'Projected Revenue',
-          icon: 'chart',
-          color: 'white'
+          icon: 'iconChart',
+          color: 'white',
+          avatarBg: '#0eae19',
+          colorClass: 'color-white'
         },
         {
           bg: '#0a95dd',
           stat: '325',
           title: 'New users',
-          icon: 'user',
-          color: 'white'
+          icon: 'iconUser',
+          color: 'white',
+          avatarBg: '#0682c2',
+          colorClass: 'color-white'
         },
         {
           bg: '#bb4fd2',
           stat: '3,567',
           title: 'Products sold',
-          icon: 'bag',
-          color: 'white'
+          icon: 'iconBag',
+          color: 'white',
+          avatarBg: '#a238b9',
+          colorClass: 'color-white'
         },
         {
           bg: '#f08232',
           stat: '32',
           title: 'Happy clients',
-          icon: 'heart',
-          color: 'white'
+          icon: 'iconHeart',
+          color: 'white',
+          avatarBg: '#d26d23',
+          colorClass: 'color-white'
         },
       ]
     }
@@ -77,8 +93,9 @@ let ServicesSection = React.createClass({
                    title={service.title}
                    bg={service.bg} 
                    stat={service.stat} 
-                   icon={service.icon} 
-                   type={service.type} />
+                   icon={service.icon}
+                   avatarBg={service.avatarBg}
+                   colorClass={service.colorClass} />
               })
             }
           </div>
@@ -89,8 +106,10 @@ let ServicesSection = React.createClass({
                    title={service.title}
                    bg={service.bg} 
                    stat={service.stat} 
-                   icon={service.icon} 
-                   type={service.type} />
+                   icon={service.icon}
+                   service={service.type}
+                   colorClass={service.colorClass}
+                   avatarBg={service.avatarBg} />
               })
             }
           </div>

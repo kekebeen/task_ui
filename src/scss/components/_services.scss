@@ -12,18 +12,32 @@
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background: tomato;
     margin-right: rems(18px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .stats__info{
     font-size: rems(28px);
-    color: $service-stat-color;
     line-height: rems(36px);
+
+    &--color-dark{
+      color: $service-stat-color-dark;
+    }
+    &--color-white{
+      color: $service-stat-color-white;
+    }
   }
   
   .stats__title{
-    color: $service-title-color;
     font-size: rems(12px);
+    &--color-dark{
+      color: $service-title-color-dark;
+    }
+    &--color-white{
+      color: $service-title-color-white;
+      opacity: 0.76;
+    }
   }
 }

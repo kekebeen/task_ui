@@ -9,7 +9,6 @@ let ArticleSmall = React.createClass({
         <div className="article__header article__header--small">
           <div className='article__author'>
             <div className='author__avatar'>
-
             </div>
             <div className='author__name'>
               {this.props.author}
