@@ -17,11 +17,6 @@ export default class DatePicker extends React.Component {
     this.previous = this.previous.bind(this);
     this.next = this.next.bind(this);
   }
-
-  componentDidMount () {
-    let days = Document.getElementsByClassName('.daypicker__week');
-    console.log(days)
-  }
   
   previous() {
     const {
@@ -90,7 +85,7 @@ export default class DatePicker extends React.Component {
 
   render() {
     return (
-      <section className="col-1-4 datepicker">
+      <div className="col-1-4 datepicker">
         <header className="datepicker__header">
           <div className="header__label">
             <div className='label__arrow label__arrow--left' onClick={this.previous}>
@@ -104,7 +99,7 @@ export default class DatePicker extends React.Component {
           <DayNames />
         </header>
         {this.renderWeeks()}
-      </section>
+      </div>
     );
   }
 }

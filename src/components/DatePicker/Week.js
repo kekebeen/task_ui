@@ -24,6 +24,7 @@ export default class Week extends React.Component {
       };
       days.push(
         <Day day={day}
+          key={i}
           selected={selected}
           select={select}/>
       );

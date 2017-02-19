@@ -22,7 +22,6 @@ let Service = React.createClass({
   },
   render() {
     let icon = this.props.icon
-    console.log(this.props.avatarBg)
     return (
       <div className='service col-1-4' style={{background: this.props.bg}}>
         <div className='service__avatar' style={{background: this.props.avatarBg}}>
