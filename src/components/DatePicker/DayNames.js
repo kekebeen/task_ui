@@ -3,7 +3,7 @@ import React from 'react'
 let DayNames = React.createClass({
   getInitialState: function (){
     return {
-     
+      days: ["MON","TUE","WED","THU","FRI","SAT","SUN"]
     }
   },
   componentWillMount: function () {
@@ -14,8 +14,12 @@ let DayNames = React.createClass({
   },
   render() {
     return (
-      <div className='dsa'>
-        dsa
+      <div className='datepicker__daynames row'>
+        {
+          this.state.days.map(function (day, index) {
+            return <span className='day span-1' key={index}>{day}</span>
+          })
+        }
       </div>
     );
   }
