@@ -17,6 +17,11 @@ export default class DatePicker extends React.Component {
     this.previous = this.previous.bind(this);
     this.next = this.next.bind(this);
   }
+
+  componentDidMount () {
+    let days = Document.getElementsByClassName('.daypicker__week');
+    console.log(days)
+  }
   
   previous() {
     const {

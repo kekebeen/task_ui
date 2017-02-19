@@ -1,7 +1,9 @@
 .datepicker{
   background: $datepicker-background-color;
   border-radius: rems(4px);
-
+  @include respond-to-max($media-tablet){
+    width: 100%;
+  }
   &__header{
     .header__label {
       display: flex;
@@ -42,7 +44,10 @@
   }
 
   &__days{
-    padding:0 10px;
+    padding:5px 10px;
+    @include respond-to-max($media-tablet){
+      flex-direction: row;
+    }
     .day{
       padding: 5px;
       font-size: rems(10px);
@@ -53,8 +58,11 @@
   }
 
   &__week{
-    padding:5px 10px;
+    padding:0 10px;
     margin-bottom: rems(10px);
+    @include respond-to-max($media-tablet){
+      flex-direction: row;
+    }
     .day{
       flex: 1;
       padding: rems(6px);
