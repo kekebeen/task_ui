@@ -26,6 +26,10 @@
   &--dark{
     border: 1px solid $round-btn-dark-border;
   }
+  &--blue {
+    background: $round-btn-blue-background;
+    color: $round-btn-blue-color;
+  }
   &--success{
     border: 1px solid $round-btn-success-border;
     background: $round-btn-success-background;

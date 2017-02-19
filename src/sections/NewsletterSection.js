@@ -21,7 +21,7 @@ let NewsletterSection = React.createClass({
       <section className='section' id="newsletter">
         <div className='container'>
           <div className='row'>
-            <NewsletterArticle title={this.state.newsletterArticle.title} body={this.state.newsletterForm.body} />
+            <NewsletterArticle title={this.state.newsletterArticle.title} body={this.state.newsletterArticle.body} />
             <NewsletterForm title={this.state.newsletterForm.title} body={this.state.newsletterForm.body} />
           </div>
         </div>

@@ -9,14 +9,16 @@ $white: #ffffff;
 $font-family: "Lato";
 $font-size: 16px;
 
-//newsletter
-$newsletter-article-background: $white;
-
+//newsletter form
 $newsletter-form-background: #33a7e3;
 $newsletter-form-color: $white;
 $newsletter-form-input-color: #b9c3cb;
 $newsletter-form-border-color: $white;
 $newsletter-form-input-hover-color: $header-color;
+// newsletter article
+$newsletter-article-body-color: #7a7c81;
+$newsletter-article-title-color: $header-color;
+$newsletter-article-background-color: $white;
 // services section variables
 $service-stat-color-dark: $header-color;
 $service-stat-color-white: $white;
@@ -39,3 +41,6 @@ $round-btn-dark-border: #bec0c3;
 
 $round-btn-success-border: transparent;
 $round-btn-success-background: #18d726;
+
+$round-btn-blue-background: #0a95dd;
+$round-btn-blue-color: $white;
