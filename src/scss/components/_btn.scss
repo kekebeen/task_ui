@@ -3,6 +3,7 @@
   padding: 12px 25px;
   font-size: rems(14px);
   &__link{
+    position: relative;
     span{
       margin-left: rems(16px);
       line-height: rems(32px);
@@ -24,5 +25,47 @@
   }
   &--dark{
     border: 1px solid $round-btn-dark-border;
+  }
+  &--success{
+    border: 1px solid $round-btn-success-border;
+    background: $round-btn-success-background;
+
+    img{
+      display: inline-block;
+      visibility: hidden;
+      margin-right: rems(14px);
+    }
+
+    img.show{ visibility: visible;}
+
+    .progress__circle{
+      animation: spin 0.9s infinite cubic-bezier(0.085, 0.260, 0.935, 0.710);
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      transform: translate(-20%, -20%);
+      pointer-events: none;
+      left: 5%;
+      top: 50%;
+      visibility: hidden;
+
+      path{
+        fill: $white;
+      }
+
+      &.show{ visibility: visible; }
+    }
+  }
+}
+
+// keyframes spin animation for loading indicator
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: center center;
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+    transform-origin: center center;
   }
 }

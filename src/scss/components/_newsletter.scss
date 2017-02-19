@@ -1,0 +1,58 @@
+.newsletter-card{
+  padding: rems(95px) rems(45px);
+  background: $newsletter-form-background;
+  color: $newsletter-form-color;
+
+  .card__title{
+    font-size: rems(26px);
+    font-weight: bold;
+    line-height: rems(36px);
+    margin-bottom: rems(15px);
+  }
+
+  .card__body{
+    text-align: center;
+    margin-bottom: rems(20px);
+    p{
+      font-size: rems(14px);
+      line-height: rems(20px);
+    }
+  }
+
+  .card__input{
+    position: relative;
+    margin-bottom: rems(30px);
+    .input__email{
+      width: 100%;
+      color: $newsletter-form-input-color;
+      padding: rems(18px) rems(77px);
+      line-height: rems(18px);
+      font-weight: bold;
+      font-size: rems(13px);
+      border-radius: rems(4px);
+      border: 1px solid transparent;
+      outline: none;
+      resize: vertical;
+      transition: all 0.3s ease-in;
+      &:focus{
+        border:1px solid $newsletter-form-input-hover-color;
+      }
+    }
+
+    .input__icon{
+      position: absolute;
+      left: rems(30px);
+      top: 55%;
+      font-size: rems(13px);
+      line-height: rems(20px);
+      margin-top: rems(-10px);
+      -webkit-transition: all .3s ease;
+      -moz-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+  }
+
+  .card__button{
+    text-align: center;
+  }
+}
