@@ -1,0 +1,94 @@
+.collapsible {
+  background: $collapsible-background-color;
+
+  .collapsible__header{
+    border-bottom: 1px solid $collapsible-header-border-color;
+    padding: 21px 21px;
+    .header__main{
+      font-size: rems(12px);
+      color: $collapsible-header-title-color;
+      font-weight: medium;
+      line-height: rems(20px);
+    }
+  }
+
+  .collapsible__body{
+    
+    .body__item{
+      padding: 18px 22px;
+      text-align: left;
+      border-bottom: 1px solid $collapsible-list-item-border-color;
+     
+      &--opened{
+        background: $collapsible-item-body-opened-background;
+        .header__icon{
+          transform: rotate(180deg);
+          transition-delay: 0.1s;
+        }
+
+        .item__body{
+          transform: perspective(350px) rotateX(0deg)!important;
+          transition: all 0.4s ease-in-out !important;
+          height: 100%!important;
+          line-height: 50px !important;
+        }
+      }
+      .item__header{
+        font-size: rems(14px);
+        font-weight: bold;
+        line-height: rems(24px);
+        color: $collapsible-item-header-color;
+        display: flex;
+        align-items: center;
+
+        &:hover{
+          cursor: pointer;
+        }
+
+        .header__text{
+          flex: 1;
+        }
+
+        .header__icon {
+          transition: transform 0.5s ease-in-out;
+        }
+      }
+      .item__body{
+        flex-direction: column;
+        background: $collapsible-item-body-opened-background;
+        padding-left: rems(19px);
+        padding-top: rems(15px);
+        transform-origin: 50% 0%;
+        transform: perspective(250px) rotateX(-90deg);
+        transition: all 0.4s ease-in-out;
+        height: 0;
+
+        &--hidden{
+          height: 0;
+        }
+        &--opened{
+          height: 100%;
+        }
+
+        .list__item{
+          margin-bottom: rems(10px);
+          transition: all .3s ease-in-out;
+          font-size: rems(12px);
+          font-weight: bold;
+          line-height: rems(38px);
+          color: $collapsible-list-item-color;
+
+          &:last-child(){
+            margin-bottom: 0;
+          }
+
+          &:hover{
+            color: $collapsible-link-hover-color;
+            cursor: pointer;
+          }
+        }
+
+      }
+    }
+  }
+}

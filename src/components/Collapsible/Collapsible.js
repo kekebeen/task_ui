@@ -8,31 +8,38 @@ let Collapsible = React.createClass({
       categories: [
         {
           name: 'Computers',
-          items: []
+          items: [],
+          isOpened: false
         },
         {
           name: 'Monitors',
-          items: []
+          items: [],
+          isOpened: false
         },
         {
           name: 'Projectors',
-          items: ['Internal', 'External', 'Led', 'Small']
+          items: ['Internal', 'External', 'Led', 'Small'],
+          isOpened: true
         },
         {
           name: 'Lights',
-          items: []
+          items: [],
+          isOpened: false
         },
         {
           name: 'Controllers',
-          items: []
+          items: [],
+          isOpened: false
         },
         {
           name: 'Consols',
-          items: []
+          items: [],
+          isOpened: false
         },
         {
           name: 'Extrass',
-          items: []
+          items: [],
+          isOpened: false
         }
       ],
       headerTitle: 'Categories'
