@@ -6,6 +6,7 @@
   margin-bottom: rems(30px);
   @include respond-to-max($media-tablet){
     margin-bottom: rems(20px);
+    width: 100%;
   }
 
   &__avatar{
