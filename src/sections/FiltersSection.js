@@ -1,10 +1,15 @@
 import React from 'react'
+import DatePicker from '../components/DatePicker/DatePicker'
 
 let FiltersSection = React.createClass({
   render() {
     return (
       <section className='section' id="filters">
-        <h1>Filters section</h1>
+        <div className='container'>
+          <div className='grid'>
+            <DatePicker />
+          </div>
+        </div>
       </section>
     );
   }
