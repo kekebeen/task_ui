@@ -1,94 +1,57 @@
-.collapsible {
+.collapsible{
   background: $collapsible-background-color;
-
-  .collapsible__header{
-    border-bottom: 1px solid $collapsible-header-border-color;
+  
+  &__header{
     padding: 21px 21px;
-    .header__main{
-      font-size: rems(12px);
+    border-bottom: 1px solid $collapsible-header-border-color;
+    .header__title{
       color: $collapsible-header-title-color;
-      font-weight: medium;
+      font-weight: 400;
       line-height: rems(20px);
+      font-size: rems(12px);
     }
   }
 
-  .collapsible__body{
-    
-    .body__item{
-      padding: 18px 22px;
-      text-align: left;
-      border-bottom: 1px solid $collapsible-list-item-border-color;
-     
-      &--opened{
-        background: $collapsible-item-body-opened-background;
-        .header__icon{
-          transform: rotate(180deg);
-          transition-delay: 0.1s;
-        }
+  &__item{
+    border-bottom: 1px solid $collapsible-list-item-border-color;
 
-        .item__body{
-          transform: perspective(350px) rotateX(0deg)!important;
-          transition: all 0.4s ease-in-out !important;
-          height: 100%!important;
-          line-height: 50px !important;
-        }
+    &__trigger{
+      color: $collapsible-item-header-color;
+      display: flex;
+      align-items: center;
+      padding: 15px 22px 15px 22px;
+
+      &.is-open{
+        background: $collapsible-item-body-opened-background;
       }
-      .item__header{
-        font-size: rems(14px);
+
+      &:hover{
+        cursor: pointer;
+      }
+
+      .trigger__text{
+        flex: 2;
+      }
+    }
+    
+    &__contentInner{
+      padding: 15px 0 20px 40px;
+      background: $collapsible-item-body-opened-background;
+
+      .list__item{
+        padding:5px 0;
+        transition: all 0.3s ease-in;
+        color: $collapsible-list-item-color;
+        text-align: left;
         font-weight: bold;
-        line-height: rems(24px);
-        color: $collapsible-item-header-color;
-        display: flex;
-        align-items: center;
+        line-height: rems(38px);
+        font-size:rems(12px);
 
         &:hover{
           cursor: pointer;
-        }
-
-        .header__text{
-          flex: 1;
-        }
-
-        .header__icon {
-          transition: transform 0.5s ease-in-out;
+          color: $collapsible-link-hover-color;
         }
       }
-      .item__body{
-        flex-direction: column;
-        background: $collapsible-item-body-opened-background;
-        padding-left: rems(19px);
-        padding-top: rems(15px);
-        transform-origin: 50% 0%;
-        transform: perspective(250px) rotateX(-90deg);
-        transition: all 0.4s ease-in-out;
-        height: 0;
-
-        &--hidden{
-          height: 0;
-        }
-        &--opened{
-          height: 100%;
-        }
-
-        .list__item{
-          margin-bottom: rems(10px);
-          transition: all .3s ease-in-out;
-          font-size: rems(12px);
-          font-weight: bold;
-          line-height: rems(38px);
-          color: $collapsible-list-item-color;
-
-          &:last-child(){
-            margin-bottom: 0;
-          }
-
-          &:hover{
-            color: $collapsible-link-hover-color;
-            cursor: pointer;
-          }
-        }
-
-      }
-    }
+    }   
   }
 }

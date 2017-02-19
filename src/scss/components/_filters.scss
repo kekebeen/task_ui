@@ -1,0 +1,42 @@
+.filters{
+  background: $filters-background-color;
+  
+  .collapsible__header{
+    display: flex;
+    padding: 0;
+    border-bottom: 1px solid $header-title-border-bottom-color;
+    .header__title{
+      flex: 1;
+      border-right: 1px solid $header-title-border-right-color;
+      color: $header-title-main-color;
+      font-weight: 400;
+      text-align: left;
+      font-size: rems(12px);
+      line-height: rems(20px);
+      display: flex;
+      align-items: center;
+      padding-left: rems(20px);
+    }
+
+    .header__action{
+      padding: 21px 21px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .action__text{
+        margin-right: rems(10px);
+        color: $header-title-action-color;
+        font-size: rems(12px);
+        line-height: rems(20px);
+        font-weight: 400;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+          cursor: pointer;
+          color: shade($header-title-action-color, 30%);
+        }
+      }
+    }
+  }
+}

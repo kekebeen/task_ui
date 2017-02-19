@@ -1,6 +1,7 @@
 import React from 'react'
 import DatePicker from '../components/DatePicker/DatePicker'
-import Collapsible from '../components/Collapsible/Collapsible'
+import CollapsibleWidgetList from '../components/Collapsible/CollapsibleWidgetList'
+import CollapsibleWidgetFilter from '../components/Collapsible/CollapsibleWidgetFilter'
 
 let FiltersSection = React.createClass({
   render() {
@@ -9,7 +10,8 @@ let FiltersSection = React.createClass({
         <div className='container'>
           <div className='grid'>
             <DatePicker />
-            <Collapsible />
+            <CollapsibleWidgetFilter />
+            <CollapsibleWidgetList />
           </div>
         </div>
       </section>

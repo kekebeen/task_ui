@@ -32,13 +32,20 @@ $datepicker-days-selected-background: #f7f9fa;
 $datepicker-days-selected-border-color: #e7ebee;
 // collapsible
 $collapsible-background-color: $white;
-$collapsible-header-title-color: #9fa3ac;
+$collapsible-header-title-color: #32394d;
 $collapsible-header-border-color: #ecf1f5;
 $collapsible-item-header-color: #32394d;
 $collapsible-item-body-opened-background: #f9fafb;
 $collapsible-link-hover-color: #0b91d6;
 $collapsible-list-item-color: #32394d;
 $collapsible-list-item-border-color: #ecf1f5;
+// filters
+$filters-background-color: white;
+$header-title-border-right-color: #ecf1f5;
+$header-title-border-bottom-color: #ecf1f5;
+$header-title-action-color: #b4bfc7;
+$header-title-main-color: #32394d;
+
 // services section variables
 $service-stat-color-dark: $header-color;
 $service-stat-color-white: $white;
