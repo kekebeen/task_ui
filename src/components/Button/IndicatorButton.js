@@ -16,6 +16,10 @@ let IndicatorButton = React.createClass({
       show: false
     })
   },
+  componentWillUnmount: function () {
+    clearInterval(buttonLoadingState)
+    clearInterval(buttonInitialState)
+  },
   render() {
     const strokeColor = this.props.strokeColor === 'dark' ? '#bec0c3' : '#FFFFFF'
     return (
@@ -38,7 +42,7 @@ let IndicatorButton = React.createClass({
       checkmarkClass: ''
     })
 
-    setTimeout(() => {
+    let buttonLoadingState = setTimeout(() => {
       this.setState({
         show: false,
         text: 'Message sent',
@@ -47,7 +51,7 @@ let IndicatorButton = React.createClass({
       alert("Message sent");
     }, 1500) // show loading indicator
 
-    setTimeout(() => {
+    let buttonInitialState = setTimeout(() => {
       this.setState({
       text: 'Subscribe'
       })

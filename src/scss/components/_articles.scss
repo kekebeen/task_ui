@@ -57,16 +57,19 @@
   }
   &__title{
     margin-bottom: rems(15px);
+    word-wrap: break-word;
 
     &--large{
       font-size: rems(34px);
       line-height: rems(36px);
+      @include respond-to-max($media-tablet){
+        padding-right: rems(100px);
+      }
     }
 
     &--small{
       font-size: rems(24px);
       line-height: rems(30px);
-      word-wrap: break-word;
       padding-right: rems(100px);
     }
   }
