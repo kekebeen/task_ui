@@ -17,7 +17,7 @@ export default class Day extends React.Component {
     return (
       <span 
         key={date.toString()} 
-        className={"day" + (isToday ? " today" : "") + (isCurrentMonth ? "" : " different-month") + (date.isSame(selected) ? " selected" : "")} 
+        className={"day" + (isToday ? " day--today" : "") + (isCurrentMonth ? "" : " day--different-month") + (date.isSame(selected) ? " day--selected" : "")} 
         onClick={()=>select(day)}>{number}</span>
     );
   }

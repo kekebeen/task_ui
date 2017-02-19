@@ -10,7 +10,7 @@ let NewsletterSection = React.createClass({
         body: 'Get in touch with fresh news from pur company and share it.'
       },
       newsletterArticle: {
-        title: 'The smartest clock that was ever made!',
+        title: 'The smartest clock that was ever made !',
         body: `The lord of the Rings is an epic high-fantasy novel written by English author J. R. R. tolkien.
               The story began as sequel to Tolkien's work.`
       }

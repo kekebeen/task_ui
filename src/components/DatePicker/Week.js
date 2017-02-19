@@ -33,7 +33,7 @@ export default class Week extends React.Component {
     }
 
     return (
-      <div className="row week" key={days[0]}>
+      <div className="row datepicker__week" key={days[0]}>
         {days}
       </div>
     );

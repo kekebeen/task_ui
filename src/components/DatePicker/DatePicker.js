@@ -2,6 +2,8 @@ import React from 'react'
 import moment from 'moment'
 import DayNames from './DayNames'
 import Week from './Week'
+import iconLeft from '../../images/icon-left.png'
+import iconRight from '../../images/icon-right.png'
 
 export default class DatePicker extends React.Component {
   constructor(props) {
@@ -9,7 +11,7 @@ export default class DatePicker extends React.Component {
     
     this.state = {
       month: moment(),
-      selected: moment().startOf('day')
+      selected: moment().startOf('month')
     };
     
     this.previous = this.previous.bind(this);
@@ -78,17 +80,21 @@ export default class DatePicker extends React.Component {
       month,
     } = this.state;
 
-    return <span className="month-label">{month.format("MMMM YYYY")}</span>;
+    return <span className="label__month">{month.format("MMMM YYYY")}</span>;
   }
 
   render() {
     return (
       <section className="col-1-4 datepicker">
-        <header className="header">
-          <div className="month-display row">
-            <i className="arrow fa fa-angle-left" onClick={this.previous}/>
+        <header className="datepicker__header">
+          <div className="header__label">
+            <div className='label__arrow label__arrow--left' onClick={this.previous}>
+              <img src={iconLeft} alt="icon left" />
+            </div>
             {this.renderMonthLabel()}
-            <i className="arrow fa fa-angle-right" onClick={this.next}/>
+            <div className='label__arrow label__arrow--right' onClick={this.next}>
+              <img src={iconRight} alt="icon right" />
+            </div>
           </div>
           <DayNames />
         </header>

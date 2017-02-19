@@ -14,7 +14,7 @@ let DayNames = React.createClass({
   },
   render() {
     return (
-      <div className='datepicker__daynames row'>
+      <div className='datepicker__days row'>
         {
           this.state.days.map(function (day, index) {
             return <span className='day span-1' key={index}>{day}</span>
