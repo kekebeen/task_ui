@@ -1,11 +1,16 @@
 .product-slider{
   background: $card-background-color;
   margin-right: rems(30px);
+  border-radius: rems(4px);
+
+  @include respond-to-max($media-tablet){
+    margin-right: 0;
+  }
 
   &__header{
     display: flex;
     align-items: center;
-    padding: 26px 30px;
+    padding: 13px 30px;
     border-bottom: 1px solid $card-header-border-color;
 
     .header__block{
@@ -43,9 +48,5 @@
 
   &__body{
     
-  }
-
-  &__footer{
-
   }
 }

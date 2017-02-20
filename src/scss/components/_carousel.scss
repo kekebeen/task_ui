@@ -1,0 +1,88 @@
+.carousel{
+  .item{
+    padding: 45px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__img{
+      margin-bottom: rems(50px);
+    }
+  }
+  .item__title{
+    text-align: center;
+    margin-bottom: rems(9px);
+
+    .title{
+      color: $carousel-title-color;
+      font-size: rems(24px);
+      font-weight: bold;
+      line-height: rems(44px);
+    }
+  }
+
+  .item__price{
+    color: $carousel-price-color;
+    font-size: rems(18px);
+    line-height: rems(44px);
+  }
+
+  &__footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 1px solid $carousel-footer-border-color;
+    
+    .footer__block{
+      flex: 1;
+      border-right: 1px solid $carousel-footer-border-color;
+
+      &__indicators{
+        flex: 4;
+        text-align: center;
+        
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 18px 20px;
+
+        .dot{
+          width: rems(10px);
+          height: rems(10px);
+          border-radius: 50%;
+          margin-right: rems(10px);
+          background: $carousel-indicator-background-color;
+          transition: background 0.3s ease-in;
+          &.active{
+            background: $carousel-indicator-active-background;
+          }
+
+          &:hover{
+            cursor: pointer;
+            background: $carousel-indicator-active-background;
+          }
+
+          & > div {
+            text-indent: -5000px; // trick indicator because event handler dont want to work on empty div
+          }
+        }
+      }
+
+      &__prev,
+      &__next{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 10px;
+        
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
