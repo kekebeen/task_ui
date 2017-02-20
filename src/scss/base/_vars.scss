@@ -10,11 +10,25 @@ $font-family: "Lato";
 $font-size: 16px;
 
 // product carousel
+// small card with carousel
 $card-background-color: $white;
 $card-header-dot-background: #d9e0e5;
 $card-header-title-color: #32394d;
 $card-header-border-color: #ecf1f5;
-
+// large card with carousel
+$card-breadcrumbs-current-color: #32394d;
+$card-breadcrumbs-items-color: #bbc2c7;
+$card-large-header-color: #32394d;
+$card-star-rating-color-active: #eb7e14;
+$card-star-rating-color: #ebeff2;
+$card-description-color: #7e8083;
+$card-button-bag-color: #11d11f;
+$card-votes-color: #32394d;
+$card-price-color: #7a7c81;
+$card-value-color: #32394d;
+$card-shipping-color: $card-price-color;
+$card-pricing-border-color: #ecf1f5;
+$card-footer-border-top-color: #ecf1f5;
 // carousel
 $carousel-title-color: #32394d;
 $carousel-price-color: #32394d;

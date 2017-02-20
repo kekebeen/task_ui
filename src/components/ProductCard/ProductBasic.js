@@ -8,7 +8,7 @@ let ProductBasic = React.createClass({
     let title = this.props.item.title
     return (
       <div className='column-4 product-slider'>
-        <div className='product-slider__header'>
+        <div className='product-slider__header--small'>
           <span className='header__block'>
             <h1 className='header__title'>{this.props.title}</h1>
           </span>
@@ -18,7 +18,7 @@ let ProductBasic = React.createClass({
             <span className='dot'></span>
           </span>
         </div>
-        <div className='product-slider__body'>
+        <div className='product-slider__body product-slider__body--small'>
           <Carousel className="carousel" autoplayInteval={4500} indicator={true} switcher={true}>
               {
                 this.props.item.images.map((item, i) => {

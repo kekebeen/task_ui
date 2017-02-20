@@ -2,12 +2,38 @@
   background: $card-background-color;
   margin-right: rems(30px);
   border-radius: rems(4px);
+  position: relative;
+  
+  // not something I do in production, just showcasing components without any particular layout
+  &:last-of-type{
+    margin-right: 0;
+  }
 
   @include respond-to-max($media-tablet){
     margin-right: 0;
   }
+  
+  // dots for both small and large header
+  .dots{ 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-  &__header{
+    .dot{
+      height: 5px;
+      width: 5px;
+      background: $card-header-dot-background;
+      margin-right: rems(2px);
+      border-radius: 50%;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+  }
+  
+  // small article slider header (basically because psd is not consistent in design,
+  // I assumed that headers will not be the same. Best practive would be to use same classes on both card
+  &__header--small{
     display: flex;
     align-items: center;
     padding: 13px 30px;
@@ -26,27 +52,143 @@
         text-align: left;
         font-weight: 400;
       }
+    }
+  }
+  
+  // large article slider header
+  &__header--large{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $card-header-border-color;
 
-      &.dots{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+    .header__block{
+      flex: 3;
+      align-items: center;
+      padding: 13px 30px;
 
-        .dot{
-          height: 5px;
-          width: 5px;
-          background: $card-header-dot-background;
-          margin-right: rems(2px);
-          border-radius: 50%;
-          &:last-of-type{
-            margin-right: 0;
-          }
+      &:last-of-type{
+        flex: 1;
+      }
+
+
+      .list__item{
+        display: inline;
+        color: $card-breadcrumbs-items-color;
+        font-size: rems(14px);
+        text-align: left;
+        line-height: rems(36px);
+        font-weight: 400;
+
+        &--current{
+          color: $card-breadcrumbs-current-color;
         }
       }
     }
   }
 
-  &__body{
-    
+  // large article slider body content 
+  &__body--large{
+
+    .product-slider__carousel {
+      border-right: 1px solid $card-header-border-color;
+    }
+
+    .product-slider__description {
+      position: relative;
+      margin-left: 0;
+      .padding__box{
+        padding: 40px 35px 0 35px;
+      }
+      
+      .title{
+        color: $card-large-header-color;
+        font-size: rems(24px);
+        line-height: rems(44px);
+        text-align: left;
+        font-weight: bold;
+      }
+      .rating{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: rems(10px);
+
+        &__stars{
+          margin-right: rems(40px);
+        }
+
+        &__votes{
+          font-size: rems(14px);
+          line-height: rems(44px);
+          font-weight: 400;
+          font-color: $card-votes-color;
+        }
+      }
+
+      .description {
+        &__text{
+          font-size: rems(16px);
+          font-weight: 400;
+          text-align: left;
+          line-height: rems(24px);
+          color: $card-description-color;
+        }
+      }
+
+      .pricing{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid $card-pricing-border-color;
+        border-bottom: 1px solid $card-pricing-border-color;
+        margin-top: rems(20px);
+
+        &__title{
+          color: $card-price-color;
+          line-height: rems(24px);
+          font-size: rems(12px);
+          font-weight: bold;
+          text-align: left;
+          margin-right: rems(30px);
+        }
+        .value{
+          font-size: rems(24px);
+          font-weight: 400;
+          line-height: rems(44px);
+          text-align: left;
+          color: $card-value-color;
+        }
+        &__price{
+          flex: 1;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          border-right: 1px solid $card-pricing-border-color;
+          padding: 10px 0;
+        }
+        &__shipping{
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        } 
+      }
+    }
+  }
+  
+  // botoom footer section containing card buttons
+ .footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $card-footer-border-top-color;
+
+    &__block{
+      flex: 1;
+      padding: 18px 20px;
+    }
   }
 }
