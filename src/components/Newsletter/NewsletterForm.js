@@ -20,7 +20,7 @@ let NewsletterForm = React.createClass({
           <span className='input__icon'><img src={icon} alt="icon envelope" /> </span>
         </div>
         <div className='card__button'>
-          <IndicatorButton type="success" strokeColor="white" text="Subscribe" />
+          <IndicatorButton type="success" strokeColor="white" text="Subscribe" message="Message sent" />
         </div>
       </div>
     );

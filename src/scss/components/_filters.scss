@@ -39,4 +39,77 @@
       }
     }
   }
+
+  .collapsible__item--button{
+    padding: 21px 59px;
+
+    .btn{
+      display: block;
+      color: $white;
+      padding: 14px 23px;
+    }
+  }
+  
+  .collapsible__item{
+    padding: 21px;
+  }
+  .collapsible__item--tags{
+
+    .tags__list{
+      
+      .tag{
+        display: inline-block;
+        padding: 5px 15px;
+        font-weight: bold;
+        font-size: rems(12px);
+        line-height: rems(20px);
+        border-radius: rems(15px);
+        margin-right: rems(10px);
+        margin-bottom: rems(10px);
+        text-align: center;
+
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+        
+        .tag__icon{
+          display: none;
+          pointer-events: none;
+        }
+
+        &--active{
+          border: 1px solid $tag-active-border-color;
+          color: $tag-active-text-color;
+
+          .tag__icon{
+            display: inline-block;
+            margin-left: rems(7px);
+          }
+
+          &:hover{
+            cursor: pointer;
+            color: shade($tag-active-text-color, 20%);
+          }
+        }
+
+        &--inactive{
+          border: none;
+          color: inherit;
+
+          .tag__icon{
+            display: none;
+          }
+        }
+      }
+    }
+
+    .tags__title{
+      color: $tags-header-title-color;
+      text-align: left;
+      font-weight: bold;
+      font-size: rems(12px);
+      line-height: rems(24px);
+    }
+  }
+  .collapsible__item--range{}
 }

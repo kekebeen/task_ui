@@ -1,6 +1,9 @@
 import React from 'react'
 import Collapsible from './Collapsible'
 import iconBin from '../../images/icon-bin.png'
+import IndicatorButton from '../Button/IndicatorButton'
+import PriceRange from '../PriceRange/PriceRange'
+import TagsFilter from '../Tags/TagsFilter'
 
 var CollapsibleWidgetFilter = React.createClass({
   getInitialState: function (){
@@ -8,8 +11,7 @@ var CollapsibleWidgetFilter = React.createClass({
       title: 'Filters',
       actionText: 'Clear all',
       section1: {
-        title: 'Brand',
-        brands: ['Sony', 'Apple', 'Bose', 'Dell', 'LG', 'Samsung', 'Huawei', 'HP']
+        title: 'Brand'
       },
       section2: {
         title: 'Price range'
@@ -38,13 +40,17 @@ var CollapsibleWidgetFilter = React.createClass({
           </span>
         </span>
       </div>
-      
+      <TagsFilter title={this.state.section1.title} />
+      <PriceRange />
       <Collapsible trigger={this.state.section3.title}>
         heees
       </Collapsible>
       <Collapsible trigger={this.state.section4.title}>
         heeedas
       </Collapsible>
+      <div className='collapsible__item--button'>
+        <IndicatorButton type="success" strokeColor="white" text="Apply filters" message="Done" />
+      </div>
      </div>
     )
   }

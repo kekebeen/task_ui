@@ -45,7 +45,7 @@ let IndicatorButton = React.createClass({
     let buttonLoadingState = setTimeout(() => {
       this.setState({
         show: false,
-        text: 'Message sent',
+        text: `${this.props.message? this.props.message: 'Message sent'}`,
         checkmarkClass: 'show'
       })
       alert("Message sent");
