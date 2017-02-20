@@ -1,0 +1,10 @@
+.chart{
+  background:$white;
+  margin-right: rems(30px);
+  &:last-of-type{
+    margin-right: 0;
+  }
+  
+  &--area{
+  }
+}

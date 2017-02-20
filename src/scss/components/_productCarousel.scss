@@ -98,8 +98,12 @@
     .product-slider__description {
       position: relative;
       margin-left: 0;
+      display: flex;
+      flex-direction: column;
+
       .padding__box{
-        padding: 40px 35px 0 35px;
+        padding: 40px 35px 0 37px;
+        margin-bottom: rems(2px);
       }
       
       .title{
@@ -144,6 +148,7 @@
         border-top: 1px solid $card-pricing-border-color;
         border-bottom: 1px solid $card-pricing-border-color;
         margin-top: rems(20px);
+        margin-bottom: rems(105px);
 
         &__title{
           color: $card-price-color;
@@ -178,11 +183,8 @@
     }
   }
   
-  // botoom footer section containing card buttons
+  // bottom footer section containing card buttons
  .footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,7 +192,38 @@
 
     &__block{
       flex: 1;
-      padding: 18px 20px;
+    }
+
+    .btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $card-footer-btn-color;
+      height: rems(55px);
+      transition: all 0.3s ease-in;
+      font-size: rems(14px);
+      line-height: rems(20px);
+      font-weight: bold;
+      
+      &__icon{
+        margin-right: rems(13px);
+      }
+      &--buy{
+        background-color: $card-footer-btn-buy-background;
+        color: $card-footer-btn-buy-color;
+        &:hover{
+          background: shade($card-footer-btn-buy-background, 20%);
+        }
+      }
+      
+      &--bag{
+        &:hover{
+          color: tint($card-footer-btn-color, 40%);
+        }
+      }
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 }

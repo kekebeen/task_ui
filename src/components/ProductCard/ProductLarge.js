@@ -1,6 +1,8 @@
 import React from 'react'
 import Carousel from '../Carousel/Carousel'
 import Rating from '../Rating/Rating'
+import iconBag from '../../images/icon-bag-dark.png'
+import iconCard from '../../images/icon-card.png'
 
 let ProductLarge = React.createClass({
   render() {
@@ -68,10 +70,16 @@ let ProductLarge = React.createClass({
                 </div>
               </div>
             </div>
-            <footer className='footer'>
-              <div className='footer__block btn btn--bag'>a</div>
-              <div className='footer__block btn btn--buy'>s</div>
-            </footer>
+            <div className='footer'>
+              <div className='footer__block btn btn--bag'>
+                <span className='btn__icon'><img src={iconBag} alt="icon-bag" /></span>
+                <span className='btn__text'>Add to bag</span>
+              </div>
+              <div className='footer__block btn btn--buy'>
+                <span className='btn__icon'><img src={iconCard} alt="icon-card" /></span>
+                <span className='btn__text'>Buy now</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -20,6 +20,12 @@
       font-weight: bold;
       line-height: rems(44px);
     }
+
+    .price {
+      color: $carousel-price-color;
+      font-size: rems(18px);
+      line-height: rems(44px);
+    }
   }
 
   .item__price{
