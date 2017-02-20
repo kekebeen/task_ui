@@ -3,6 +3,8 @@
   margin-right: rems(30px);
   border-radius: rems(4px);
   position: relative;
+  min-height: 0;           /* Firefox fix spacing issues*/
+  min-width: 0;
   
   // not something I do in production, just showcasing components without any particular layout
   &:last-of-type{
