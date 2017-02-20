@@ -27,21 +27,27 @@ var CollapsibleWidgetFilter = React.createClass({
     }
   },
 
+  removeActiveTags: function (){
+    let tags = [].slice.call(document.getElementsByClassName('tag--active'))
+    tags.map(function (tag, index) {
+      tag.classList.remove('tag--active')
+    })
+  },
   render() {
 
     return (
      <div className='col-1-4 filters'>
         <div className='collapsible__header'>
         <h1 className='header__title'>{this.state.title}</h1>
-        <span className='header__action'>
+        <span className='header__action' onClick={this.removeActiveTags}>
           <span className='action__text'>{this.state.actionText}</span>
-          <span className='action__icon'>
+          <span className='action__icon' >
             <img src={iconBin} alt="icon-bin" />
           </span>
         </span>
       </div>
       <TagsFilter title={this.state.section1.title} />
-      <PriceRange />
+      <PriceRange title={this.state.section2.title} />
       <Collapsible trigger={this.state.section3.title}>
         heees
       </Collapsible>

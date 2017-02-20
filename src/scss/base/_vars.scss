@@ -9,6 +9,13 @@ $white: #ffffff;
 $font-family: "Lato";
 $font-size: 16px;
 
+// product carousel
+$card-background-color: $white;
+$card-header-dot-background: #d9e0e5;
+$card-header-title-color: #32394d;
+$card-header-border-color: #ecf1f5;
+
+
 //newsletter form
 $newsletter-form-background: #33a7e3;
 $newsletter-form-color: $white;
@@ -49,6 +56,7 @@ $header-title-main-color: #32394d;
 $tags-header-title-color: #32394d;
 $tag-active-border-color: #e7ebee;
 $tag-active-text-color: #0b91d6;
+$tag-text-color: #7a7c81;
 // services section variables
 $service-stat-color-dark: $header-color;
 $service-stat-color-white: $white;

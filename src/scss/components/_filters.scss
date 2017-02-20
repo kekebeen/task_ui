@@ -50,7 +50,8 @@
     }
   }
   
-  .collapsible__item{
+  .collapsible__item--tags,
+  .collapsible__item--range{
     padding: 21px;
   }
   .collapsible__item--tags{
@@ -67,6 +68,12 @@
         margin-right: rems(10px);
         margin-bottom: rems(10px);
         text-align: center;
+        color: $tag-text-color;
+        cursor: pointer;
+
+        &:hover{
+          color: shade($tag-text-color, 30%);
+        }
 
         &:nth-child(3n){
           margin-right: 0;
@@ -84,10 +91,10 @@
           .tag__icon{
             display: inline-block;
             margin-left: rems(7px);
+            pointer-events: all;
           }
 
           &:hover{
-            cursor: pointer;
             color: shade($tag-active-text-color, 20%);
           }
         }
@@ -109,7 +116,76 @@
       font-weight: bold;
       font-size: rems(12px);
       line-height: rems(24px);
+      margin-bottom: rems(15px);
     }
   }
-  .collapsible__item--range{}
+  .collapsible__item--range{
+
+    .range__slider{
+      position: relative;
+      
+      .input-range{
+        position: relative;
+        width: 100%;
+      }
+      .input-range__track--background{
+        left: 0;
+        margin-top: -0.15rem;
+        position: absolute;
+        right: 0;
+        top: 50%;
+      }
+      .input-range__track{
+        background: #eeeeee;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        display: block;
+        height: 0.3rem;
+        position: relative;
+        transition: left 0.3s ease-out, width 0.3s ease-out;
+
+        &--active{
+          background: #3f51b5;
+        }
+      }
+
+      .input-range__slider-container{
+        transition: left 0.3s ease-out;
+      }
+      
+      .input-range__label{
+        color: #aaaaaa;
+        font-size: 0.8rem;
+        transform: translateZ(0);
+        white-space: nowrap;
+
+        &-container{
+          left: -50%;
+          position: relative;
+        }
+      }
+
+      .input-range__label--value{
+        position: absolute;
+        top: -1.8rem;
+      }
+
+      .input-range__slider{
+        appearance: none;
+        background: #3f51b5;
+        border: 1px solid #3f51b5;
+        border-radius: 100%;
+        cursor: pointer;
+        display: block;
+        height: 1rem;
+        margin-left: -0.5rem;
+        margin-top: -0.65rem;
+        outline: none;
+        position: absolute;
+        top: 50%;
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        width: 1rem;
+      }
+    }
+  }
 }

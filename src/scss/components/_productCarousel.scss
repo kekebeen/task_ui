@@ -1,0 +1,51 @@
+.product-slider{
+  background: $card-background-color;
+  margin-right: rems(30px);
+
+  &__header{
+    display: flex;
+    align-items: center;
+    padding: 26px 30px;
+    border-bottom: 1px solid $card-header-border-color;
+
+    .header__block{
+      flex: 3;
+      &:last-of-type{
+        flex: 1;
+      }
+
+      .header__title {
+        color: $card-header-title-color;
+        font-size: rems(16px);
+        line-height: 36px;
+        text-align: left;
+        font-weight: 400;
+      }
+
+      &.dots{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .dot{
+          height: 5px;
+          width: 5px;
+          background: $card-header-dot-background;
+          margin-right: rems(2px);
+          border-radius: 50%;
+          &:last-of-type{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__body{
+    
+  }
+
+  &__footer{
+
+  }
+}

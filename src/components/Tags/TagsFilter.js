@@ -33,6 +33,15 @@ let TagsFilter = React.createClass({
   }
   },
 
+  componentDidMount: function () {
+
+  },
+
+  toggleActiveTag: function (i) {
+    let targetElement = document.getElementById('tag-'+i)
+    targetElement.classList.toggle('tag--active')
+  },
+
   render() {
     return (
       <div className='collapsible__item collapsible__item--tags'>
@@ -42,9 +51,9 @@ let TagsFilter = React.createClass({
             this.state.tags.map((item, i) => {
               console.log("Item, active", i, item.active)
               return (
-                <li key={i} className={`tag tag--${item.active === true ? 'active': 'inactive'}`}>
-                  <span className='tag__title'>{item.title}</span>
-                  <span className='tag__icon'><img src={iconDelete} alt="icon-delete" /></span>
+                <li key={i} className={`tag tag--${item.active === true ? 'active': ''}`} id={`tag-${i}`} >
+                  <span className='tag__title' onClick={this.toggleActiveTag.bind(this,i)}>{item.title}</span>
+                  <span className='tag__icon' onClick={this.toggleActiveTag.bind(this,i)}><img src={iconDelete} alt="icon-delete" /></span>
                 </li>
               )
             })
