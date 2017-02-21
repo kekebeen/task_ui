@@ -78,7 +78,7 @@ let ChartBar = React.createClass({
             data={ this.state.data }
             labels={ this.state.series }
             colors={ this.state.colors }
-            height={ 120 }
+            height={ 150 }
             stacked={'stacked'}
           />
           

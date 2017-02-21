@@ -174,22 +174,93 @@
   }
 
 
-  &__body{
+  &__body--circle{
     position: relative;
-  }
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    padding: 40px 30px;
+    @include respond-to-max($media-tablet){
+      padding: 40px 15px;
+    }
+    .legends{
+      flex:1;
+      .legend{
+        margin-bottom: rems(5px);
 
+        &__top{
+          display: flex;
+          justify-content: flex-start;
+          align-items: baseline;
+          margin-bottom: rems(10px);
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+          .dot{
+            width: rems(9px);
+            height: rems(9px);
+            border-radius: 50%;
+            margin-right: rems(10px);
+          }
+          .text{
+            font-size: rems(12px);
+            font-style: bold;
+            line-height: rems(20px);
+            color: $chart-circle-legend-desc;
+          }
+        }
+        &__bottom{
+          color: $chart-circle-footer-title;
+          font-size: rems(18px);
+          font-weight: bold;
+          line-height: rems(20px);
+        }
+      }
+    }
+    .circle{
+      flex: 2;
+    }
+  }
+  
+  &__footer--circle{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid $chart-circle-footer-border;
+    .footer__block{
+      border-right: 1px solid $chart-circle-footer-border;
+      flex: 1;
+      text-align: center;
+      padding: 10px 5px;
+      
+      .title{
+        font-size: rems(28px);
+        line-height: rems(36px);
+        font-weight: 400;
+        color: $chart-circle-footer-title;
+      }
+      .desc{
+        opacity: .76;
+        font-size: rems(12px);
+        line-height: rems(24px);
+        color: $chart-circle-footer-desc;
+        font-weight: medium;
+      }
+    }
+  }
   &--area{
   }
 }
 
 // charts react components styles mainly for bar chart usage
 .Charts {
+  position: relative;
   margin: 0 auto;
   background-color: inherit;
   display: flex;
   align-content: space-between;
   justify-content: center;
-  padding: 50px 0;
+  padding: 40px 0 60px 0;
   @include respond-to-max($media-tablet){
     max-width: 100%;
     padding-left: rems(10px);
@@ -198,7 +269,7 @@
   }
   &:after{
     content: '';
-    bottom: rems(50px);
+    bottom: 3.625rem;
     width:100%;
     height:2px;
     background: $chart-hr-color;
@@ -224,6 +295,7 @@
     }
   }
   
+  // bar chart serie styles
   &--serie {
     height: 100%;
     //margin: 0 30px 0 0;
@@ -249,7 +321,7 @@
       position: absolute;
       left: rems(-5px);
       right: 0;
-      bottom: -35px;
+      bottom: rems(-45px);
       font-size: rems(12px);
       line-height: rems(20px);
       font-weight: 400;
@@ -292,6 +364,7 @@
       }
     }
     
+    // below are two helper classes In case Chart will be stacked or layered ( Made support for both in react)
     &.layered {
       position: absolute;
       left: 5%;
@@ -311,6 +384,7 @@
       border-radius: 0;
     }
     
+    // Area / Line chart tooltip ( not the same as bar chart tooltip, thats why not the same styles)
     .tooltip {
       position: absolute;
       font-size: rems(12px);
@@ -368,6 +442,7 @@
   }
 }
 
+// in case I want animating on initial page load
 @keyframes slideUp {
   from { transform: scaleY(0); }
   to { transform: scaleY(1); }
@@ -380,9 +455,20 @@
   justify-content: center;
   align-content: stretch;
   align-items: stretch;
+  padding: 23px 5px 0px 5px;
   @include respond-to-max($media-tablet){
     padding-bottom: 20px;
     max-width: 100%;
+  }
+
+  &:after{
+    content: '';
+    bottom: 2.425rem;
+    width:120%;
+    height:2px;
+    background: $chart-hr-color;
+    position:absolute;
+    left: 0;
   }
   
   &--tooltip {
@@ -449,4 +535,13 @@
   g {
     transition: 1.5s ease-out;
   }
+}
+
+// Inner circle text styles 
+
+.svg__inner{
+  fill: $chart-circle-legend-title;
+  font-size: rems(37px);
+  line-height: rems(45px);
+  font-weight: 400;
 }

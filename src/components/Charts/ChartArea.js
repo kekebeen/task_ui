@@ -23,7 +23,7 @@ let ChartArea = React.createClass({
         <ChartHeader title="Statistics" />
         <ChartAreaSubHeader number={this.state.number} text={this.state.text} />
         <div className='chart__body'>
-          <Area {...opt} dots={ true } lines={ true } height={137} hideLabels={true} width={270}/>
+          <Area {...opt} dots={ true } lines={ true } height={147} hideLabels={true} width={270}/>
         </div>
       </div>
     );
