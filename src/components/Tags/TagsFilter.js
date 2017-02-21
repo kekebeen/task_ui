@@ -49,7 +49,6 @@ let TagsFilter = React.createClass({
         <ul className='tags__list'>
           {
             this.state.tags.map((item, i) => {
-              console.log("Item, active", i, item.active)
               return (
                 <li key={i} className={`tag tag--${item.active === true ? 'active': ''}`} id={`tag-${i}`} >
                   <span className='tag__title' onClick={this.toggleActiveTag.bind(this,i)}>{item.title}</span>

@@ -6,9 +6,7 @@ import ChartCircle from '../components/Charts/ChartCircle'
 let ChartsSection = React.createClass({
   getInitialState: function () {
     return {
-      chartArea:{},
-      chartBar:{},
-      chartCircle:{}
+      // no initial data, every component has their own
     }
   },
   render() {

@@ -19,11 +19,11 @@ let ProductBasic = React.createClass({
           </span>
         </div>
         <div className='product-slider__body product-slider__body--small'>
-          <Carousel className="carousel" autoplayInteval={4500} indicator={true} switcher={true}>
+          <Carousel className="carousel" indicator={true} switcher={true}>
               {
                 this.props.item.images.map((item, i) => {
                   return(
-                      <div className='item'>
+                      <div className='item' key={i}>
                         <div className='item__img'>
                           <img src={item} key={i} alt="image-carousel" />
                         </div>

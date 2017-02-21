@@ -34,11 +34,11 @@ let ProductLarge = React.createClass({
 
         <div className='product-slider__body product-slider__body--large row'>
           <div className='column-6 product-slider__carousel'>
-            <Carousel className="carousel" autoplayInteval={4500} indicator={true} switcher={true}>
+            <Carousel className="carousel" indicator={true} switcher={true}>
               {
                 images.map((image, i) => {
                   return(
-                      <div className='item'>
+                      <div className='item' key={i}>
                         <div className='item__img'>
                           <img src={image} key={i} alt="image-carousel" />
                         </div>
@@ -54,7 +54,7 @@ let ProductLarge = React.createClass({
               <h1 className='title'>{name}</h1>
               <div className='rating'>
                 <Rating votes={votes} stars={stars} />
-                <span class='rating__votes'>{stars} ({votes} votes)</span>
+                <span className='rating__votes'>{stars} ({votes} votes)</span>
               </div>
               <div className='description'>
                 <p className='description__text'>{desc}</p>
