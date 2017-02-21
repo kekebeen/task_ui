@@ -3,6 +3,7 @@
   border-radius: rems(4px);
   @include respond-to-max($media-tablet){
     width: 100%;
+    margin-bottom: rems(25px);
   }
   &__header{
     .header__label {

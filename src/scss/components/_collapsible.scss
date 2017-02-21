@@ -1,6 +1,9 @@
 .collapsible{
   background: $collapsible-background-color;
-  
+  @include respond-to-max($media-tablet){
+    width: 100%;
+    border-bottom: rems(25px);
+  }  
   &__header{
     padding: 21px 21px;
     border-bottom: 1px solid $collapsible-header-border-color;

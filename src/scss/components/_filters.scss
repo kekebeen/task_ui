@@ -1,6 +1,9 @@
 .filters{
   background: $filters-background-color;
-  
+  @include respond-to-max($media-tablet){
+    width: 100%;
+    margin-bottom: rems(25px);
+  }
   .collapsible__header{
     display: flex;
     padding: 0;
