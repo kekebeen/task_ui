@@ -123,14 +123,82 @@
     }
   }
   .collapsible__item--range{
+    
+    .price__title{
+      color: $header-title-main-color;
+      font-size: rems(12px);
+      font-style: bold;
+      line-height: rems(24px);
+      margin-bottom: rems(14px);
+    }
 
+    .input__group{
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+      flex-wrap: wrap;
+
+      .input__control{
+        flex: 1;
+
+        .label{
+          color: $range-input-label;
+          font-size: rems(10px);
+          font-weight: bold;
+          line-height: rems(20px);
+          margin-bottom: rems(10px);
+        }
+        
+        // I can use type=number but then I need to override html5 arrow styles which is not so great 
+        // for cross browser experience.Anyway its probably more semantically right
+        input[type="text"]{
+          max-width: rems(70px);
+          outline: none;
+          border: 1px solid $range-input-border;
+          color: $range-input-color;
+          margin-right: rems(15px);
+          padding: 7px 3px;
+          &:last-of-type{
+            margin-right: 0;
+          }
+        }
+      }
+    }
     .range__slider{
       position: relative;
-      
+      padding: 50px 0 20px 0;
       .input-range{
         position: relative;
         width: 100%;
       }
+
+      .bar{
+        height: rems(4px);
+
+        &-0,
+        &-2 {
+          background:$range-disabled-slider;
+        }
+        &-1{
+          background: $range-active-slider;
+        }
+      }
+
+     .handle{
+        background: $white;
+        height: rems(16px);
+        width: rems(16px);
+        border-radius: 50%;
+        text-indent: rems(-5000px);
+        border: 1px solid $range-disabled-slider;
+        box-shadow: 0 0 10px $range-disabled-slider;
+        bottom: rems(-10px);
+        &:hover{
+          background: $range-disabled-slider;
+          cursor: pointer; 
+        }
+      }
+
       .input-range__track--background{
         left: 0;
         margin-top: -0.15rem;

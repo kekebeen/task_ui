@@ -77,11 +77,19 @@ $header-title-border-right-color: #ecf1f5;
 $header-title-border-bottom-color: #ecf1f5;
 $header-title-action-color: #b4bfc7;
 $header-title-main-color: #32394d;
+
 // tags
 $tags-header-title-color: #32394d;
 $tag-active-border-color: #e7ebee;
 $tag-active-text-color: #0b91d6;
 $tag-text-color: #7a7c81;
+// range
+$range-input-border: #e7ebee;
+$range-input-color: #32394d;
+$range-input-label: #c5c8d1;
+$range-active-slider: #0a95dd;
+$range-disabled-slider: #eef2f5;
+$range-handle-bg: $white; 
 // services section variables
 $service-stat-color-dark: $header-color;
 $service-stat-color-white: $white;
