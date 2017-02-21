@@ -45,13 +45,18 @@
     }
 
   }
-
+  
+  // filter button styles for 2 of the charts
   .subheader__filters{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     transition: all 0.3s ease-in;
     padding: 21px 70px 0 21px;
+    @include respond-to-max($media-tablet){
+      padding: 21px 20px 0 21px;
+      justify-content: space-between;
+    }
 
     .filter__btn{
       flex: 1;
@@ -67,6 +72,9 @@
       line-height: rems(20px);
       letter-spacing: 0.9px;
       border: 1px solid transparent;
+      @include respond-to-max($media-tablet){
+        font-size:rems(9px);
+      }
       
       &:last-of-type{
         margin-right: 0;
@@ -82,11 +90,14 @@
         color: tint($chart-filters-btn-active-color, 20%);
       }
     }
-  }
-
+  } 
+  
+  // sales styles for bar chart 
   .subheader__sales{
     padding-left: rems(30px);
-
+    @include respond-to-max($media-tablet){
+      padding-left: rems(25px);
+    }
     .sale__title{
       color: $chart-subheader-sales-number-color;
       font-weight: 400;
@@ -104,6 +115,64 @@
       font-weight: 400;
     }
   }
+  
+  // legend styles for area / line chart displaying
+  &__subheader--area{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 28px 30px;
+    
+    .subheader__area{
+      flex: 2;
+      .sale__title{
+        color: $chart-area-title-color;
+        font-size: rems(44px);
+        font-weight: 400;
+        line-height: rems(36px);
+      }
+      .sale__text{
+        color: $chart-area-text-color;
+        font-size: rems(12px);
+        line-height: rems(24px);
+        font-weight: 400;
+        opacity: .76;
+      }
+    }
+    .subheader__legend{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      flex-direction: column;
+    
+      .label{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .dot{
+          margin-right: rems(11px);
+          width: rems(9px);
+          height: rems(9px);
+          border-radius: 50%;
+
+          &--purple{
+            background-color: $chart-area-legend-green;
+          }
+          &--green{
+            background-color: $chart-area-legend-purple;
+          }
+        }
+        .text{
+          font-weight: bold;
+          font-size: rems(12px);
+          line-height: rems(20px);
+        }
+      }
+    }
+  }
+
 
   &__body{
     position: relative;
@@ -113,15 +182,20 @@
   }
 }
 
-// charts react components styles 
+// charts react components styles mainly for bar chart usage
 .Charts {
   margin: 0 auto;
   background-color: inherit;
   display: flex;
-  align-items: flex-end;
+  align-content: space-between;
   justify-content: center;
   padding: 50px 0;
-  
+  @include respond-to-max($media-tablet){
+    max-width: 100%;
+    padding-left: rems(10px);
+    align-content: stretch;
+
+  }
   &:after{
     content: '';
     bottom: rems(50px);
@@ -162,6 +236,10 @@
     animation: slideUp .6s;
     position: relative;
     border-bottom: 1px solid #c2c2c2;
+    @include respond-to-max($media-tablet){
+      margin-right: rems(14px);
+      width: rems(6px);
+    }
     
     &.stacked {
       display: block;
@@ -272,6 +350,7 @@
   }
 }
 
+// LEGENDS STYLES IF USING ANY
 .Legend {
   &--color {
     display: inline-block;
@@ -292,4 +371,82 @@
 @keyframes slideUp {
   from { transform: scaleY(0); }
   to { transform: scaleY(1); }
+}
+
+// AREA LINE CHART STYLES
+.LineChart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+  align-items: stretch;
+  @include respond-to-max($media-tablet){
+    padding-bottom: 20px;
+    max-width: 100%;
+  }
+  
+  &--tooltip {
+    display: block;
+    position: absolute;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 2px;
+    font-family: Sans-serif;
+    font-size: 10px;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    white-space: nowrap;
+    @include respond-to-max($media-tablet){
+      transform: translate(-80%, -150%);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      border: 6px solid transparent;
+      border-top: 6px solid #d0d0d0;
+      bottom: -12px;
+      left: 50%;
+      margin-left: -6px;
+    }
+    
+      &::after {
+      content: '';
+      position: absolute;
+      border: 5px solid transparent;
+   border-top: 5px solid #fff;
+   bottom: -10px;
+   left: 50%;
+   margin-left: -5px;
+    }   
+    
+    i {
+      &::before { content: ': '; }
+      font-style: normal
+    }
+  }
+  
+  &--axis {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    fill: #6a6f7b;
+  }
+  
+  &--label {
+    font-size: rems(10px);
+  }
+  
+  circle {
+    transition: .3s ease-out;
+      
+    &:hover {
+      r: 8px;
+    }
+  }
+
+  g {
+    transition: 1.5s ease-out;
+  }
 }
