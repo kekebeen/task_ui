@@ -30,7 +30,7 @@ var Circle = React.createClass({
 
     return (
       <svg width={ diameter } height={ diameter } viewBox={ '0 0 ' + diameter + ' ' + diameter } xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <text x="20" y="55%" text-anchor="middle" dy="0.13em" className='svg__inner'>${circleTitle}</text>
+        <text x="80" y="55%" textAnchor="middle" dy="0.13em" className='svg__inner'>${circleTitle}</text>
         { this.props.data.map(function (slice, sliceIndex) {
           var angle, nextAngle, percent;
 

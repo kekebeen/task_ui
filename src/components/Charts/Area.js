@@ -176,6 +176,7 @@ const XAxis = React.createClass({
           return (
           <g>
             <line
+              key={li}
               x1={ padding  } y1={ y }
               x2={ this.props.width + padding } y2={ y }
               stroke="#eaeaea"
@@ -208,7 +209,7 @@ const YAxis = React.createClass({
         { lines.map((l, li) => {
           var x = ~~(li * segment + padding ) + .5
           return (
-            <g>
+            <g key={li}>
               <line
                 x1={ x } y1={ padding  }
                 x2={ x } y2={ height }

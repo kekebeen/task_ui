@@ -22,22 +22,26 @@ let PriceRange = React.createClass({
         <div className="input__group">
           <div className="input__control">
             <div className="label">From</div>
-            <input type="text" ref="numberMin" name="numberMin" id="numberMin" value={this.state.value.min}/>
+            <input type="text" ref="numberMin" name="numberMin" id="numberMin" value={this.state.value.min} onChange={this.handleChange}/>
           </div>
           <div className="input__control">
             <div className="label">To</div>
-            <input type="text" ref="numberMax" name="numberMax" id="numberMax" value={this.state.value.max}/>
+            <input type="text" ref="numberMax" name="numberMax" id="numberMax" value={this.state.value.max} onChange={this.handleChange}/>
           </div>
         </div>
 
         <div className='range__slider'>
-        <ReactSlider defaultValue={[20, 80]} withBars onChange={this.change} pearling={true} snapDragDisabled={true}>
+        <ReactSlider defaultValue={[20, 80]} value={this.state.min,this.state.max} withBars onChange={this.change} pearling={true} snapDragDisabled={true}>
           <div className="my-handle">1</div>
           <div className="my-handle">2</div>
         </ReactSlider>,
         </div>
       </div>
     );
+  },
+
+  handleChange: function (e) {
+    this.setState
   }
 })
 

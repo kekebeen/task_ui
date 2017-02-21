@@ -100,8 +100,8 @@ export default class Carousel extends Component {
           }
         </ul>
         <footer className='carousel__footer'>
-          {enabled && switcher && <div className='footer__block footer__block__prev'>
-            <div className="dot dot__prev" onClick={prevSlide}>
+          {enabled && switcher && <div className='footer__block footer__block__prev' onClick={prevSlide}>
+            <div className="dot dot__prev">
               <img src={iconPrev} alt="icon-prev" />
             </div>
             </div>
@@ -111,8 +111,8 @@ export default class Carousel extends Component {
               <div onClick={this.changeSlide.bind(this, index + 1)}>{index+1}</div>
             </li>)}
           </ol>}
-          {enabled && switcher && <div className='footer__block footer__block__next'>
-            <div className="dot dot__next" onClick={nextSlide}>
+          {enabled && switcher && <div className='footer__block footer__block__next' onClick={nextSlide}>
+            <div className="dot dot__next">
               <img src={iconNext} alt="icon-next" />
             </div>
             </div>

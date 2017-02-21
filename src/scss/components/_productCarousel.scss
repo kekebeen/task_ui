@@ -5,6 +5,26 @@
   position: relative;
   min-height: 0;           /* Firefox fix spacing issues*/
   min-width: 0;
+  max-height: 500px;
+
+  &--large{
+
+    .product-slider__carousel{
+      .carousel{
+        .item{
+          padding: 52px 0 18px 0;
+          margin-bottom: 0.54rem;
+        }
+      }
+    }
+  }
+
+  .carousel{
+    .item{
+      padding: 35px 0px 0px;
+      margin-bottom: rems(22px);
+    }
+  }
   
   // not something I do in production, just showcasing components without any particular layout
   &:last-of-type{
@@ -102,8 +122,8 @@
       flex-direction: column;
 
       .padding__box{
-        padding: 40px 35px 0 37px;
-        margin-bottom: rems(2px);
+        padding: 20px 35px 0 37px;
+        //margin-bottom: rems(2px);
       }
       
       .title{
