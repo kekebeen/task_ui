@@ -14,6 +14,7 @@ git clone https://github.com/kekebeen/task_ui.git
 cd task_ui
 npm install
 npm start
+localhost:3000 in browser and off you go
 ```
 - or If you want to serve build folder (you can build it again or you can serve this one included in the repo)
 - You need static server of any kind('')
