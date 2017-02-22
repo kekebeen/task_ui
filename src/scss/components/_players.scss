@@ -1,3 +1,354 @@
 .player{
   margin-right: 30px;
+  background: $white;
+  border-radius: rems(4px);
+  
+  @include respond-to-max($media-tablet){
+    margin-right: 0;
+    margin-bottom: rems(25px);
+  }
+  .player__header{
+    overflow:hidden;
+
+    .header{
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      .box{
+        width: rems(62px);
+        height: rems(100px);
+        background: $player-box;
+        cursor: pointer;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 20px;
+          height: 20px;
+        }
+        &:nth-child(2n){
+          flex:2;
+          width: rems(120px);
+          height: rems(120px);
+          margin-left: rems(10px);
+          margin-right: rems(10px);
+          img{
+            width: rems(24px);
+            height: rems(24px);
+          }
+        }
+      }
+    }
+
+    .slider{
+      .carousel__footer{
+        display: none;
+      }
+      li{
+        width: 100%;
+      }
+    }
+  }
+
+  .player__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title{
+      color: $player-title;
+      font-size: rems(20px);
+      line-height: rems(36px);
+      font-weight: 400;
+    }
+    .subtitle{
+      color: $player-subtitle;
+      font-size: rems(12px);
+      line-height: rems(24px);
+      font-weight: 400;
+    }
+  }
+
+  .player__progress{
+    padding: 11px 0 0 0;
+  }
+
+  .player__footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer__block{
+      flex: 1;
+      text-align: center;
+      padding: 5px 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      img{
+        margin-right: rems(10px);
+      }
+
+      .stat{
+        font-weight: bold;
+        font-size: rems(12px);
+        line-height: rems(36px);
+        color: $player-footer-stats;
+        transition: all 0.3s ease-in;
+        &:hover{
+          cursor: pointer;
+          color: shade($player-footer-stats, 40%);
+        }
+      }
+
+      &--duration{
+        color: $player-footer-duration;
+        line-height: rems(36px);
+        font-weight: bold;
+        font-size: rems(12px);
+      }
+    }
+  }
+
+  &--two{
+    border-radius: rems(4px);
+    display: flex;
+    justify-items: flex-start;
+    align-items: flex-start;
+    margin-bottom: rems(50px);
+    @include respond-to-max($media-tablet){
+      flex-direction: column;
+    }
+    .player__left{
+      @include respond-to-max($media-tablet){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box{
+        width: rems(164px);
+        height: rems(160px);
+        background : $player-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: rems(4px);
+        border-bottom-left-radius: rems(4px);
+
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+    .player__right{
+      padding: 8px 25px 0 25px;
+
+      .player__header{
+        display: flex;
+        justify-content:center;
+        align-items:flex-start;
+
+        .header__block--title{
+          flex: 3;
+
+          .title{
+            font-size:rems(20px);
+            font-weight: 400;
+            line-height: rems(36px);
+            color: $player-title;
+          }
+
+          .subtitle{
+            font-size:rems(13px);
+            font-weight: medium;
+            line-height: rems(24px);
+            color: $player-subtitle;
+          }
+        }
+        .header__block--favourite{
+          padding-top: rems(10px);
+          transition: transform 0.3s ease-in-out;
+          transform: rotate(0deg);
+          will-change: transform;
+          &:hover{
+            cursor:pointer;
+            transform: rotate(360deg);
+          }
+        }
+      }
+
+      .player__progress{
+        @include respond-to-max($media-tablet){
+          width: rems(250px);
+        }
+      }
+
+      .footer__block{
+        padding: 0;
+        
+        &--stats{
+          flex: 5 1 auto;
+          text-align: left;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        &--duration{
+          flex: 1 1 auto;
+        }
+      }
+    }
+  }
+  
+  // Basically same as above, but since because there is no hierarchy between components, and every component
+  // can posess different functionality we are copy pasteing classes.Not sharing with other components
+  &--three{
+    border-radius: rems(4px);
+    display: flex;
+    justify-items: flex-start;
+    align-items: flex-start;
+    @include respond-to-max($media-tablet){
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .player__left{
+      @include respond-to-max($media-tablet){
+        padding-top: rems(15px);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box{
+        background : $player-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rems(125px);
+        height: rems(120px);
+        border-top-left-radius: rems(4px);
+        border-bottom-left-radius: rems(4px);
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .player__right{
+      padding: 8px 25px 0 25px;
+
+      .player__header{
+        display: flex;
+        justify-content:center;
+        align-items:flex-start;
+
+        margin-bottom: rems(10px);
+
+        .header__block--title{
+          flex: 3;
+
+          .title{
+            font-size:rems(20px);
+            font-weight: 400;
+            line-height: rems(36px);
+            color: $player-title;
+          }
+
+          .subtitle{
+            font-size:rems(13px);
+            font-weight: medium;
+            line-height: rems(24px);
+            color: $player-subtitle;
+          }
+        }
+
+        .header__block--favourite{
+          padding-top: rems(10px);
+          transition: transform 0.3s ease-in-out;
+          transform: rotate(0deg);
+          will-change: transform;
+          &:hover{
+            cursor:pointer;
+            transform: rotate(360deg);
+          }
+        }
+      
+      }
+      
+      .footer__block{
+        padding: 0;
+
+        &--stats{
+          flex: 5 1 auto;
+          text-align: left;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        &--duration{
+          flex: 1 1 auto;
+        }
+      }
+
+      .player__progress{
+        padding: 0;
+        max-width: rems(635px);
+        width: rems(635px);
+        height: 2px;
+        background: $player-bar-default;
+        position: relative;
+        @include respond-to-max($media-tablet){
+          width: rems(200px);
+        }
+        &:after{
+          position: absolute;
+          width: 30%;
+          height: 2px;
+          content: '';
+          left:0 ;
+          bottom: 0;
+          background: $player-bar-active;
+        }
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+// canvas overlay animation
+.player__progress {
+  position: relative;
+  overflow: hidden;
+
+  .overlay{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index: 100;
+    background: rgba(255,255,255,0.7);
+    animation: width 20s infinite linear;
+    will-change: width;
+    animation-delay: 2s;
+  }
+}
+
+@keyframes width {
+  from {left: 0px;}
+  to {left: 100%;}
 }

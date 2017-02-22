@@ -4,6 +4,12 @@
   display: flex;
   align-items: center;
   margin-bottom: rems(30px);
+  border-radius: rems(4px);
+  transition: all 0.3s ease-in;
+  &:hover{
+    cursor:pointer;
+    opacity: 0.8;
+  }
   @include respond-to-max($media-tablet){
     margin-bottom: rems(20px);
     width: 100%;

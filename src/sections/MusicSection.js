@@ -9,10 +9,10 @@ let MusicSection = React.createClass({
       <section className='section' id="music">
         <div className="container">
           <div className="row">
-            <div className="column-4 mr">
+            <div className="column-3 mr">
               <PlayerOne />
             </div>
-            <div className='column-8'>
+            <div className='column-9'>
               <PlayerTwo />
               <PlayerThree />
             </div>

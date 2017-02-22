@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
+  border-radius: rems(4px);
 
   @include respond-to-max($media-tablet){
     margin-right: 0;

@@ -5,7 +5,10 @@
   position: relative;
   min-height: 0;           /* Firefox fix spacing issues*/
   min-width: 0;
-  max-height: 500px;
+
+  @include respond-to-max($media-tablet){
+    margin-bottom: rems(25px);
+  }
 
   &--large{
 

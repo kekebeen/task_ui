@@ -2,6 +2,7 @@
   padding: rems(95px) rems(45px);
   background: $newsletter-form-background;
   color: $newsletter-form-color;
+  border-radius: rems(4px);
 
   .card__title{
     font-size: rems(26px);
@@ -63,6 +64,8 @@
   padding: 55px 60px;
   background: $newsletter-article-background-color;
   margin-right: rems(30px);
+  border-radius: rems(4px);
+  
   .newsletter-article-info{
     padding-right: rems(20px);
   }

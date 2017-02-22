@@ -12,7 +12,7 @@ let ArticlesSection = React.createClass({
               a much larger work.`,
         tags: ["Technology", "Startups"],
         colors: ["#dd8b0a", "#0a95dd"],
-        bg: '#9c62b5'
+        bg: 'linear-gradient( to left top, #884da1, #a066b9)'
       },
       post2: {
         author: "Grag Willson",

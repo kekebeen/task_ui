@@ -1,9 +1,11 @@
 .filters{
   background: $filters-background-color;
+  border-radius: rems(4px);
   @include respond-to-max($media-tablet){
     width: 100%;
     margin-bottom: rems(25px);
   }
+  .collapsible{ border-radius: rems(4px); }
   .collapsible__header{
     display: flex;
     padding: 0;

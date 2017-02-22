@@ -1,4 +1,8 @@
 .section {
   position: relative;
   padding: rems(40px);
+
+  @include respond-to-max($media-tablet){
+    padding: rems(25px);
+  }
 }
